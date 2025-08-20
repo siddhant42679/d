@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Was Your Day? 💕</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6f7, #e6f0ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0px 8px 25px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #ff4d94;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #444;
+      margin: 20px 0 10px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .options label {
+      display: block;
+      background: #f9f9ff;
+      padding: 12px;
+      border-radius: 12px;
+      margin: 8px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .options input {
+      display: none;
+    }
+
+    .options label:hover {
+      background: #ffe6f2;
+    }
+
+    .options input:checked + label {
+      background: #ffb3d9;
+      color: white;
+      border: 1px solid #ff4d94;
+    }
+
+    button {
+      background: #ff4d94;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #e63e84;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hey Love 💖</h1>
+    <p>Just a few sweet questions for you ✨</p>
+
+    <form id="dayForm">
+      
+      <!-- Q1 -->
+      <div class="question">
+        <h2>💭 How was your day?</h2>
+        <div class="options">
+          <input type="radio" id="day1" name="day" value="Amazing">
+          <label for="day1">Amazing 🌸</label>
+
+          <input type="radio" id="day2" name="day" value="Good">
+          <label for="day2">Good 💕</label>
+
+          <input type="radio" id="day3" name="day" value="Okay">
+          <label for="day3">Okay 😌</label>
+
+          <input type="radio" id="day4" name="day" value="Not great">
+          <label for="day4">Not great 🥺</label>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question">
+        <h2>🍳 How was your breakfast?</h2>
+        <div class="options">
+          <input type="radio" id="break1" name="breakfast" value="Yummy">
+          <label for="break1">Yummy 🍰</label>
+
+          <input type="radio" id="break2" name="breakfast" value="Okay">
+          <label for="break2">Okay 🥞</label>
+
+          <input type="radio" id="break3" name="breakfast" value="Skipped">
+          <label for="break3">Skipped 😅</label>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question">
+        <h2>🥗 How was your lunch?</h2>
+        <div class="options">
+          <input type="radio" id="lunch1" name="lunch" value="Delicious">
+          <label for="lunch1">Delicious 😋</label>
+
+          <input type="radio" id="lunch2" name="lunch" value="Average">
+          <label for="lunch2">Average 😌</label>
+
+          <input type="radio" id="lunch3" name="lunch" value="Didn’t like">
+          <label for="lunch3">Didn’t like 🙁</label>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question">
+        <h2>👯 Did you meet your best friend today?</h2>
+        <div class="options">
+          <input type="radio" id="friend1" name="friend" value="Yes">
+          <label for="friend1">Yes 🫂</label>
+
+          <input type="radio" id="friend2" name="friend" value="No">
+          <label for="friend2">No 😔</label>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question">
+        <h2>✨ What would make your day better?</h2>
+        <div class="options">
+          <input type="radio" id="wish1" name="wish" value="Talking to you">
+          <label for="wish1">Talking to you 💌</label>
+
+          <input type="radio" id="wish2" name="wish" value="Eating something sweet">
+          <label for="wish2">Eating something sweet 🍭</label>
+
+          <input type="radio" id="wish3" name="wish" value="A long nap">
+          <label for="wish3">A long nap 💤</label>
+
+          <input type="radio" id="wish4" name="wish" value="Something else">
+          <label for="wish4">Something else 🌙</label>
+        </div>
+      </div>
+
+      <button type="submit">Submit 💖</button>
+    </form>
+
+    <div class="footer">Made with love 💕</div>
+  </div>
+
+  <!-- Firebase script placeholder -->
+  <script>
+    // TODO: Add Firebase config + code here when connecting
+    document.getElementById("dayForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Your answers are saved! 💖 (Firebase connection will store them)");
+    });
+  </script>
+</body>
+</html>
